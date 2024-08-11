@@ -1,6 +1,7 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
         Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
 }
 
 :root {
@@ -64,6 +65,7 @@ button:active {
 #youOption {
     padding: 5px 10px;
     text-align: center;
+    transition: 0.3s;
 }
 
 #container {
@@ -73,7 +75,8 @@ button:active {
     border: 1px solid #ffffff77;
     border-radius: 10px;
     margin-inline: auto;
-    width: 25%;
+    width: 15%;
+    transition: 0.3s;
 }
 
 #containerTitle {
@@ -87,8 +90,47 @@ button:active {
 
 #teamBot {
     color: #ff0000;
+    float: right;
+    transform: translateY(-3.1em);
+    transition: 0.3s;
 }
 
 #winner {
     font-size: 1.1em;
+}
+
+@media (max-width: 1170px) {
+    #teamBot {
+        float: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 300px) {
+    #container {
+        width: 75%;
+    }
+
+    #choiceLabel {
+        display: block;
+        text-align: center;
+    }
+
+    #youOption {
+        display: block;
+        margin-top: 1em;
+        margin-inline: auto;
+    }
+
+    #submit {
+        display: block;
+        margin-top: 1em;
+        margin-inline: auto;
+    }
 }
